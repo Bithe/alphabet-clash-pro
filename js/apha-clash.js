@@ -35,7 +35,27 @@ document.addEventListener("keyup", function (event) {
 
   if (playerPressed === currentAlphabetToLower) {
     console.log("ok");
+
+    const score = getElementValueByID('score');
+    const newScore = score + 1;
+
+    setElementValueById('score', newScore);
+    // score increasing
+    // const score = document.getElementById("score");
+    // const scoreText = score.innerText;
+    // const scoreTextToNum = parseInt(scoreText);
+    // const newScore = scoreTextToNum + 1;
+    // score.innerText = newScore;
+
+    // start a new round
     playTheGame();
     removeBackgrounColor(currentAlphabetToLower);
+  } else {
+    // life decreasing
+    //  const life = document.getElementById('life');
+    //  const lifeText = life.innerText;
+    //  const lifeTextToNum = parseInt(lifeText);
+    //  const newLife = lifeTextToNum - 1;
+    //  life.innerText = newLife;
   }
 });
